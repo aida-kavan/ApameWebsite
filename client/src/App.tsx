@@ -37,7 +37,18 @@ import SubGlass from './orderform/prints/sublimition/SubGlass'
 const queryClient = new QueryClient();
 
 function App() {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+  return <>
+  <main className="min-h-screen">
+    <Header/>
+  </main>
+  </>
+=======
+>>>>>>> Front-end-Arsham
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
@@ -51,6 +62,10 @@ function App() {
       </BrowserRouter>
     </QueryClientProvider>
   );
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Back-end-reza
+>>>>>>> Front-end-Arsham
 }
 
 export default App;
