@@ -33,6 +33,7 @@ import SubGlass from './orderform/prints/sublimition/SubGlass'
 const queryClient = new QueryClient();
 
 function App() {
+<<<<<<< HEAD
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
@@ -45,6 +46,14 @@ function App() {
       </BrowserRouter>
     </QueryClientProvider>
   );
+=======
+
+  return <>
+  <main className="min-h-screen">
+    <Header/>
+  </main>
+  </>
+>>>>>>> 97ef6a8 (Create Header / edit task 1)
 }
 
 export default App;
