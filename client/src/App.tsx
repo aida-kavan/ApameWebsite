@@ -1,8 +1,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
-import AppLayout from '../src/layout/AppLayout.tsx';
+import AppLayout from './layout/AppLayout.tsx';
 import Home from './layout/Home.tsx';
+
 
 
 /*import Dashboard from './pages/Dashboard';
@@ -37,18 +38,7 @@ import SubGlass from './orderform/prints/sublimition/SubGlass'
 const queryClient = new QueryClient();
 
 function App() {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-  return <>
-  <main className="min-h-screen">
-    <Header/>
-  </main>
-  </>
-=======
->>>>>>> Front-end-Arsham
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
@@ -62,10 +52,6 @@ function App() {
       </BrowserRouter>
     </QueryClientProvider>
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/Back-end-reza
->>>>>>> Front-end-Arsham
 }
 
 export default App;
