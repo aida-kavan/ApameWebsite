@@ -4,7 +4,7 @@ import Header from "./layout/header"
 function App() {
 
   return <>
-  <main>
+  <main className="min-h-screen">
     <Header/>
   </main>
   </>
