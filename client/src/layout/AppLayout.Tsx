@@ -4,9 +4,9 @@ import Header from './header';
 
 function AppLayout() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen min-w-screen flex flex-col items-center">
       <Header />
-      <main className="min-h-screen"> 
+      <main className="min-h-screen "> 
         <Outlet />
       </main>
     </div>

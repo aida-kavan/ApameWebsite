@@ -1,19 +1,18 @@
-interface navbarMenuListtypes{
-  id: number,
-  title: string,
-  link: string,
+interface navbarMenuListtypes {
+  id: number;
+  title: string;
+  link: string;
 }
 
-
-const navbarMenuList :navbarMenuListtypes[] = [
+const navbarMenuList: navbarMenuListtypes[] = [
   {
     id: 1,
-    title: "ارتباط با ما",
+    title: "خانه",
     link: "#",
   },
   {
     id: 2,
-    title: "درباره ما",
+    title: "خدمات",
     link: "#",
   },
   {
@@ -23,12 +22,13 @@ const navbarMenuList :navbarMenuListtypes[] = [
   },
   {
     id: 4,
-    title: "خدمات",
+
+    title: "درباره ما",
     link: "#",
   },
   {
     id: 5,
-    title: "خانه",
+    title: "ارتباط با ما",
     link: "#",
   },
 ];
@@ -36,15 +36,17 @@ const wew = window.innerWidth;
 console.log(wew);
 
 const Navbar = () => {
-  return <nav className=" flex items-center justify-center gap-16  text-lg mt-[-1.9%] w-[600px] ml-[38%]">
-    {
-      navbarMenuList.map((nav) => (
+  return (
+    <nav className=" flex items-center justify-center gap-15  ">
+      {navbarMenuList.map((nav) => (
         <ul>
-          <li key={nav.id}><a href={nav.link}>{nav.title}</a></li>
+          <li key={nav.id}>
+            <a href={nav.link}>{nav.title}</a>
+          </li>
         </ul>
-      ))
-    }
-  </nav>
-}
+      ))}
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
