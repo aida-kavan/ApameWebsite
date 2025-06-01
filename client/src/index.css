@@ -124,23 +124,45 @@
   font-family: peyda;
   src: url("Peyda/Peyda-Bold[@fontbazi].ttf");
 }
+
 @font-face {
   font-family: peydabold;
   src: url("/client/public/Peyda/Peyda-Black[@fontbazi].ttf");
 }
 
+@font-face {
+  font-family: iransans-semiBold;
+  src: url(./fonts/IRANSansX-DemiBold.ttf);
+}
+
+@font-face {
+  font-family: iransans-medium;
+  src: url(./fonts/IRANSansX-Medium.ttf);
+}
+
 * {
   scroll-behavior: smooth;
   font-family: peyda;
-  direction:rtl
+  direction: rtl;
 }
 
+
+.iransans-semiBold {
+  font-family: iransans-semiBold;
+}
+
+
 body{
-  background-color: #fffff1e3;
+  background-color: #e40000e3;
   background-image: url(https://www.transparenttextures.com/patterns/dust.png);
   background-repeat: repeat;
   direction: rtl;
-  
-
 }
+
+@layer utilities {
+  .navbar-settings {
+    filter: drop-shadow(1px 1px 20px #00000048);
+  }
+}
+
 

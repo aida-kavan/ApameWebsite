@@ -1,0 +1,9 @@
+      <div className="flex justify-end">
+        <button className="group relative inline-flex items-center border shadow-inner shadow-black/20 justify-center px-6 py-1 rounded-full text-black/90 z-10 ml-5 overflow-hidden transition-opacity duration-300 hover:opacity-90 ">
+          <span className="absolute -top-4 -left-6 z-[-2] h-[calc(100%+1em)] w-[calc(100%+3em)] rounded-full opacity-70 blur-2xl saturate-[1.18] transition-transform duration-200 bg-[linear-gradient(225deg,_#132dae,_#002aff_60%,_#722ed1)]"></span>
+
+          <span className="relative z-10 flex items-center gap-2  p-2 rounded-full text-white text-lg  ">
+            ثبت نام/ ورود
+          </span>
+        </button>
+      </div>
