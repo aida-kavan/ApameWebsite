@@ -5,7 +5,7 @@ import { BsCashCoin } from "react-icons/bs";
 
 const Header = () => {
   return (
-    <header className="rounded-full items-center justify-center bg-[#f8f8f8b7] navbar-settings grid grid-cols-5 mt-5 w-[85%] h-[10vh] fixed">
+    <header className="rounded-full items-center justify-center bg-[#f8f8f8b7] navbar-settings grid grid-cols-5 mt-5 w-[85%] h-[10vh]">
 
       <div className="flex justify-center items-center">
         <img src="images/logo.png" alt="" className="w-[90px] ml-[55%]" />
