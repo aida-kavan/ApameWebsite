@@ -1,15 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
-import { getPrintingServices } from "../lib/api/";
+import { getPrintingServices } from "../lib/api";
 import { useNavigate } from "react-router-dom";
 import Spinner from "@/components/ui/Spinner";
 
-function Print() {
+interface PrintingService {
+  id: number;
+  name: string;
+}
+
+function PrintServices() {
   const navigate = useNavigate();
   const {
     data: prints,
     isLoading,
     error,
-  } = useQuery({
+  } = useQuery<PrintingService[]>({
     queryKey: ['printingservices'],
     queryFn: getPrintingServices,
   });
@@ -22,14 +27,13 @@ function Print() {
       </div>
     );
 
-   function handleServiceClick(serviceId) {
-
+  function handleServiceClick(serviceId: number) {
     navigate("/offset-services", { 
       state: { 
         serviceId: serviceId 
       } 
     });
-  };
+  }
 
   return (
     <div className="p-4">
@@ -48,4 +52,4 @@ function Print() {
   );
 }
 
-export default Print;
+export default PrintServices;

@@ -20,10 +20,10 @@ const Header = () => {
         <img src={MicroPhon} alt="" className="w-[20px]"/>
       </div>
 
-      <button className="fixed mr-[47%] bg-[#ffe600] flex items-center justify-center gap-2 rounded-full py-2 px-4 hover:bg-[#4672e2cc] hover:text-white duration-300 hover:scale-105 cursor-pointer  ">
+      {/*<button className="fixed mr-[47%] bg-[#4672E2] flex items-center justify-center gap-2 rounded-full py-2 px-4 hover:bg-[#4672e2cc] hover:text-white duration-300 hover:scale-105 cursor-pointer  ">
         <span>پویش سودینو</span>
         <BsCashCoin className="font-extrabold"/>
-      </button>
+      </button>*/}
 
       <div className="mr-[43%]">
         <SearchNav />

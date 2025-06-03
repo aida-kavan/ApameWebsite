@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 interface navbarMenuListtypes {
   id: number;
   title: string;
@@ -9,7 +11,7 @@ const navbarMenuList: navbarMenuListtypes[] = [
   {
     id: 1,
     title: "خانه",
-    link: "#",
+    link: "/",
   },
   {
     id: 2,
@@ -19,66 +21,72 @@ const navbarMenuList: navbarMenuListtypes[] = [
       {
         id: 1,
         title: 'خدمات چاپ',
-        link: "#",
+        link: "/print-services",
       },
       {
         id: 2,
         title: 'سایت و سئو',
-        link: "#",
+        link: "/web-services",
       },
       {
         id: 3,
         title: 'سوشال مدیا',
-        link: "#",
+        link: "/socialmedia-services",
       },
-        {
+      {
         id: 4,
         title: ' تابلو و لیزر',
-        link: "#",
+        link: "/lazer-services",
       },
-        {
+      {
         id: 5,
         title: 'طراحی گرافیک',
-        link: "#",
+        link: "/graphic-services",
       },
-        {
+      {
         id: 6,
         title: 'عکاسی و فیلمبرداری',
-        link: "#",
+        link: "/filmming-services",
       },
       {
         id: 7,
         title: 'موشن گرافی',
-        link: "#",
+        link: "/motion-services",
       },
     ],
   },
   {
     id: 3,
     title: "محصولات",
-    link: "#",
+    link: "/products",
   },
   {
     id: 4,
     title: "درباره ما",
-    link: "#",
+    link: "/about",
   },
   {
     id: 5,
     title: "ارتباط با ما",
-    link: "#",
+    link: "/contact",
   },
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  function handleNavigation(link: string) {
+    navigate(link);
+  };
+
   return (
     <nav className="flex items-center justify-center gap-16 relative">
       {navbarMenuList.map((nav) => (
         <div key={nav.id} className="relative group">
           <ul>
             <li>
-              <a
-                href={nav.link}
+              <button
+                onClick={() => handleNavigation(nav.link)}
                 className="text-[16.5px] hover:text-[#4672e2e0] hover:peydaBold duration-200 hover:opacity-80 flex items-center"
               >
                 {nav.title}
@@ -87,7 +95,7 @@ const Navbar = () => {
                     &#9660;
                   </span>
                 )}
-              </a>
+              </button>
             </li>
           </ul>
 
@@ -96,12 +104,12 @@ const Navbar = () => {
               <ul className="py-1">
                 {nav.submenu.map((subItem) => (
                   <li key={subItem.id}>
-                    <a
-                      href={subItem.link}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-right"
+                    <button
+                      onClick={() => handleNavigation(subItem.link)}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-right w-full"
                     >
                       {subItem.title}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -113,4 +121,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;
