@@ -1,33 +1,12 @@
 function Home() {
   return (
-    <section className="w-[85%] h-[85vh]  rounded-3xl p-6">
-      <div className="grid grid-cols-3 grid-rows-3 gap-4 h-full">
-        <div className="bg-gray-100 rounded-4xl col-span-2 row-span-2 flex items-center justify-center text-blue-800 text-2xl font-bold">
-          باکس بزرگ
-        </div>
-
-        <div className="gap-3 grid">
-         <div className="bg-gray-100 rounded-4xl flex items-center justify-center text-blue-800 text-xl font-bold h-24">
-          باکس 2
-         </div>
-
-         <div className="bg-gray-100 rounded-4xl flex items-center justify-center text-blue-800 text-xl font-bold h-40">
-          باکس 1
-         </div>
-        </div>
-        
-        <div className="bg-gray-100 rounded-4xl row-span-2 flex items-center justify-center text-blue-800 text-xl font-bold">
-          باکس  5
-        </div>
-        
-        <div className="bg-gray-100 rounded-4xl flex items-center justify-center text-blue-800 text-xl font-bold">
-          باکس  4
-        </div>
-        
-        <div className="bg-gray-100 rounded-4xl flex items-center justify-center text-blue-800 text-xl font-bold">
-          باکس 3
-        </div>
-      </div>
+    <section className="w-[85%] h-[83vh]  rounded-3xl mt-[9.1%]  z-10">
+      <div className="bg-red-300 absolute rounded-4xl text-center w-[1140px] h-[550px]">wd</div>
+      <div className="bg-green-300 absolute rounded-4xl text-center w-[458px] h-[160px] mr-[61%]">wd</div>
+      <div className="bg-blue-600 absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[9.6%]">wd</div>
+      <div className="bg-purple-400 absolute rounded-4xl text-center w-[458px] h-[290px] mr-[61%] mt-[25%]">wd</div>
+      <div className="bg-orange-500 absolute rounded-4xl text-center w-[560px] h-[190px] mr-[0%] mt-[30.25%]">wd</div>
+      <div className="bg-sky-300 absolute rounded-4xl text-center w-[560px] h-[190px] mr-[30.5%] mt-[30.25%]">wd</div>
     </section>
   );
 }

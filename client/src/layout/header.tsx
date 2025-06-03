@@ -109,7 +109,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="rounded-full flex fixed items-center justify-between shadow  bg-[#ffffff]   mt-5 w-[85%] p-1  ">
+      <header className="rounded-full flex fixed items-center justify-between shadow bg-[#ffffff] mt-5 w-[85%] p-1 z-20">
         <div className="flex justify-center gap-4 items-center mr-5">
           <img src="images/logo.png" alt="" className="w-[90px] " />
           <SearchNav />
