@@ -1,6 +1,6 @@
 const Home = () => {
-  return <section className="w-[85%] h-[85vh] bg-amber-100 rounded-3xl">
-    kdlkfds
+  return <section className="w-[85%] h-[85vh]  rounded-3xl">
+    
   </section>
 }
 

@@ -1,37 +1,172 @@
 import SearchNav from "@/components/ui/SearchNav";
-import Navbar from "@/components/ui/Navbar";
-import MicroPhon from '../../public/images/headphone-mic (1).png';
-import { BsCashCoin } from "react-icons/bs";
+
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Headset, ShoppingBag } from "lucide-react";
+interface navbarMenuListtypes {
+  id: number;
+  title: string;
+  link: string;
+  submenu?: { id: number; title: string; link: string }[];
+  icon?: React.ReactNode;
+}
 
 const Header = () => {
+  const [submenuOpen, setSubmenuOpen] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setSubmenuOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const submenu = [
+    {
+      id: 1,
+      title: "خدمات چاپ",
+      link: "#",
+    },
+    {
+      id: 2,
+      title: "سایت و سئو",
+      link: "#",
+    },
+    {
+      id: 3,
+      title: "سوشال مدیا",
+      link: "#",
+    },
+    {
+      id: 4,
+      title: " تابلو و لیزر",
+      link: "#",
+    },
+    {
+      id: 5,
+      title: "طراحی گرافیک",
+      link: "#",
+    },
+    {
+      id: 6,
+      title: "عکاسی و فیلمبرداری",
+      link: "#",
+    },
+    {
+      id: 7,
+      title: "موشن گرافی",
+      link: "#",
+    },
+    {
+      id: 8,
+      title: "خدمات مشاوره",
+      link: "#",
+    },
+    {
+      id: 9,
+      title: "آموزش",
+      link: "#",
+    },
+  ];
+
+  const navbarMenuList: navbarMenuListtypes[] = [
+    {
+      id: 1,
+      title: "خانه",
+      link: "#",
+    },
+    {
+      id: 2,
+      title: "خدمات",
+      link: "#",
+      submenu: submenu,
+    },
+    {
+      id: 3,
+      title: "محصولات",
+      link: "#",
+    },
+    {
+      id: 4,
+      title: "درباره ما",
+      link: "#",
+    },
+    {
+      id: 5,
+      title: "ارتباط با ما",
+      link: "#",
+      icon: <Headset/>
+    },
+  ];
+
   return (
-    <header className="rounded-full items-center justify-center bg-[#f8f8f8b7] navbar-settings grid grid-cols-5 mt-5 w-[85%] h-[10vh] relative z-10">
+    <>
+      <header className="rounded-full flex fixed items-center justify-between shadow  bg-[#ffffff]   mt-5 w-[85%] p-1  ">
+        <div className="flex justify-center gap-4 items-center mr-5">
+          <img src="images/logo.png" alt="" className="w-[90px] " />
+          <SearchNav />
+        </div>
 
-      <div className="flex justify-center items-center">
-        <img src="images/logo.png" alt="" className="w-[90px] ml-[55%]" />
+        <div className="flex justify-center items-center gap-16">
+          {navbarMenuList.map((nav) => (
+            <ul key={nav.id}>
+              <li className="flex gap-1 items-center justify-center">
+                {nav.icon && (
+                  <span>{nav.icon}</span>
+                )}
+                <a
+                  href={nav.link}
+                  className="text-[16.5px] hover:text-[#4672e2e0] duration-200 hover:opacity-80 flex items-center cursor-pointer"
+                  onClick={() => {
+                    if (nav.title === "خدمات") {
+                      setSubmenuOpen((prev) => !prev);
+                    } else {
+                      setSubmenuOpen(false);
+                    }
+                  }}
+                >
+                  {nav.title}
+                </a>
+              </li>
+            </ul>
+          ))}
+        </div>
+
+        {/* <button className="  bg-[#ffe600] flex items-center justify-center gap-2 rounded-full py-2 px-4 hover:bg-[#4672e2cc] hover:text-white duration-300 hover:scale-105 cursor-pointer ml-[-130px] ">
+          <span>پویش سودینو</span>
+          <BsCashCoin />
+        </button> */}
+
+        <div className="flex items-center justify-center gap-2">
+          <button className="bg-white shadow border p-3 rounded-full">
+          <ShoppingBag/>
+        </button>
+          <button className="group relative inline-flex items-center justify-center px-3  rounded-full text-black/90 z-10 ml-5 overflow-hidden transition-all duration-300 ease-in-out shadow-inner shadow-black/20 hover:shadow">
+            <span className="absolute -top-4 -left-6 z-[-2] h-[calc(100%+1em)] w-[calc(100%+3em)] rounded-full opacity-70 blur-2xl saturate-[1.18] bg-[linear-gradient(225deg,_#132dae,_#002aff_60%,_#722ed1)] transition-all duration-500 ease-in-out transform group-hover:scale-110 group-hover:opacity-90"></span>
+
+            <span className="relative z-10 flex items-center gap-2 p-3 rounded-full text-white text-lg">
+              ثبت نام/ ورود
+            </span>
+          </button>
+          
+        </div>
+      </header>
+
+      <div
+        className={`bg-[#bacbf8] fixed top-28 h-12 w-[80%] px-32 shadow rounded-b-3xl flex justify-evenly gap-2 overflow-hidden transition-all duration-500 ease-in-out mx-auto ${
+          submenuOpen ? "max-h-32 opacity-100" : "max-h-0 "
+        }`}
+      >
+        {submenu.map((item) => (
+          <button key={item.id} className=" text-sm hover:bg-white/20 p-2" >
+            <Link to={item.link}>{item.title}</Link>
+          </button>
+        ))}
       </div>
-
-
-      <div className="flex justify-center items-center w-[600px] mr-[-64%] mt-[2%]">
-        <Navbar />
-      </div>
-
-      <div className="mr-[10%]">
-        <img src={MicroPhon} alt="" className="w-[20px]"/>
-      </div>
-
-      <button className="fixed mr-[47%] bg-[#ffe600] flex items-center justify-center gap-2 rounded-full py-2 px-4 hover:bg-[#4672e2cc] hover:text-white duration-300 hover:scale-105 cursor-pointer  ">
-        <span>پویش سودینو</span>
-        <BsCashCoin className="font-extrabold"/>
-      </button>
-
-      <div className="mr-[43%]">
-        <SearchNav />
-      </div>
-
-      <button className="bg-[#4672E2] text-white iransans-semiBold text-[15px] w-[140px] h-[45px] rounded-full text-center cursor-pointer mr-[45%] duration-300 hover:scale-105 hover:opacity-70">ثبت نام / ورود</button>
-
-    </header>
+    </>
   );
 };
 

@@ -130,15 +130,6 @@
   src: url("/client/public/Peyda/Peyda-Black[@fontbazi].ttf");
 }
 
-@font-face {
-  font-family: iransans-semiBold;
-  src: url(./fonts/IRANSansX-DemiBold.ttf);
-}
-
-@font-face {
-  font-family: iransans-medium;
-  src: url(./fonts/IRANSansX-Medium.ttf);
-}
 
 * {
   scroll-behavior: smooth;
@@ -153,8 +144,8 @@
 
 
 body{
-  background-color: #338000e3;
-  background-image: url(https://www.transparenttextures.com/patterns/dust.png);
+  background-color: #f3f3f3e3;
+  /* background-image: url(https://www.transparenttextures.com/patterns/dust.png); */
   background-repeat: repeat;
   direction: rtl;
 }
@@ -165,4 +156,7 @@ body{
   }
 }
 
+li{
+  text-decoration: none;
+}
 
