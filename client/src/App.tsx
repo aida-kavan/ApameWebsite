@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 import AppLayout from './layout/AppLayout.tsx';
 import Home from './layout/Home.tsx';
+import PrintServices from './layout/PtintServices.tsx';
+
 
 
 
@@ -28,7 +30,6 @@ import PhotoGraphy from './features/shooting/PhotoGraphy';
 import SubFrame from "./orderform/prints/sublimition/SubFrame"
 import SubPuzzle from './orderform/prints/sublimition/SubPuzzel'
 import SubGlass from './orderform/prints/sublimition/SubGlass'
-//import Print from './ui/Print';
 //import Web from './ui/Web';
 //import SocialMedia from './ui/SocialMedia';
 //import Board from './ui/Board';
@@ -46,6 +47,7 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index element={<Home />} />
             <Route path='/home' element={<Home />} />
+            <Route path='/print-services' element={<PrintServices />} />
           </Route>
           
         </Routes>
