@@ -140,6 +140,15 @@
   src: url(./fonts/IRANSansX-Medium.ttf);
 }
 
+@font-face {
+  font-family: iransans-Bold;
+  src: url(./fonts/IRANSansX-Bold.ttf);
+}
+@font-face {
+  font-family: hamrah;
+  src: url(./fonts/Hamrah.ttf);
+}
+
 * {
   scroll-behavior: smooth;
   font-family: peyda;
@@ -149,6 +158,18 @@
 
 .iransans-semiBold {
   font-family: iransans-semiBold;
+}
+
+.iransans-medium {
+  font-family: iransans-medium;
+}
+
+.iransans-Bold {
+  font-family: iransans-Bold;
+}
+
+.hamrah {
+  font-family: hamrah;
 }
 
 
@@ -164,14 +185,6 @@ body{
     filter: drop-shadow(1px 1px 20px #00000048);
   }
 }
-
-/* li{
-  text-decoration: none;
-  background-color: #dad1d1;
-  background-image: url(https://www.transparenttextures.com/patterns/dust.png);
-  background-repeat: repeat;
-  direction: rtl;
-} */
 
 @layer utilities {
   .navbar-settings {
@@ -196,12 +209,22 @@ body{
     filter: drop-shadow(1px 1px 1px #000000);
   }
 
-  .home-slider-big {
+  .home-slider-box {
     filter: blur(20px);
-    filter: drop-shadow(1px 1px 20px #00000050);
+    filter: drop-shadow(1px 1px 3px #00000050);
+  }
+
+  .ball-img-speaker {
+    filter: drop-shadow(1px 1px 3px #00000075);
+  }
+
+  .btn-home {
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.37));
   }
 
 }
+
+
 
 
 

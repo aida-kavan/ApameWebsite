@@ -123,4 +123,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
->>>>>>> origin/Devloper
+
