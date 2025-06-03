@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-const Home = () => {
-  return <section className="w-[85%] h-[85vh]  rounded-3xl">
-    
-  </section>
-=======
 function Home() {
   return (
     <section className="w-[85%] h-[85vh]  rounded-3xl p-6">
@@ -36,7 +30,6 @@ function Home() {
       </div>
     </section>
   );
->>>>>>> origin/Devloper
 }
 
 export default Home;
