@@ -1,7 +1,6 @@
 import SearchNav from "@/components/ui/SearchNav";
 import Navbar from "@/components/ui/Navbar";
 import MicroPhon from '../../public/images/headphone-mic (1).png';
-import { BsCashCoin } from "react-icons/bs";
 
 const Header = () => {
   return (
