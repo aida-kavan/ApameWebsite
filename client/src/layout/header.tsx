@@ -1,5 +1,5 @@
 import SearchNav from "@/components/ui/SearchNav";
-
+import { FaCoins } from "react-icons/fa6";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Headset, ShoppingBag } from "lucide-react";
@@ -91,11 +91,16 @@ const Header = () => {
     },
     {
       id: 4,
-      title: "درباره ما",
+      title: "وبلاگ",
       link: "#",
     },
     {
       id: 5,
+      title: "درباره ما",
+      link: "#",
+    },
+    {
+      id: 6,
       title: "ارتباط با ما",
       link: "#",
       icon: <Headset/>
@@ -110,13 +115,10 @@ const Header = () => {
           <SearchNav />
         </div>
 
-        <div className="flex justify-center items-center gap-16">
+        <div className="flex justify-center items-center gap-14 ml-5 mt-1">
           {navbarMenuList.map((nav) => (
             <ul key={nav.id}>
               <li className="flex gap-1 items-center justify-center">
-                {nav.icon && (
-                  <span>{nav.icon}</span>
-                )}
                 <a
                   href={nav.link}
                   className="text-[16.5px] hover:text-[#4672e2e0] duration-200 hover:opacity-80 flex items-center cursor-pointer"
@@ -130,6 +132,9 @@ const Header = () => {
                 >
                   {nav.title}
                 </a>
+                {nav.icon && (
+                  <span className="ml-2 mb-1">{nav.icon}</span>
+                )}
               </li>
             </ul>
           ))}
@@ -141,10 +146,13 @@ const Header = () => {
         </button> */}
 
         <div className="flex items-center justify-center gap-2">
-          <button className="bg-white shadow border p-3 rounded-full">
-          <ShoppingBag/>
-        </button>
-          <button className="group relative inline-flex items-center justify-center px-3  rounded-full text-black/90 z-10 ml-5 overflow-hidden transition-all duration-300 ease-in-out shadow-inner shadow-black/20 hover:shadow">
+          <button className="bg-white shadow border p-3 rounded-full text-2xl cursor-pointer bg-btn-hovor hover:text-white hover:scale-90 duration-300 ">
+          <FaCoins className="text-yellow-300 shadow-sodino-icon"/>
+          </button>
+          <button className="bg-white shadow border p-3 rounded-full cursor-pointer bg-btn-hovor hover:text-white hover:scale-90 duration-300 ml-1">
+          <ShoppingBag />
+          </button>
+          <button className="group relative inline-flex items-center justify-center px-3 cursor-pointer hover:scale-90  rounded-full text-black/90 z-10 ml-5 overflow-hidden transition-all duration-300 ease-in-out shadow-inner shadow-black/20 hover:shadow">
             <span className="absolute -top-4 -left-6 z-[-2] h-[calc(100%+1em)] w-[calc(100%+3em)] rounded-full opacity-70 blur-2xl saturate-[1.18] bg-[linear-gradient(225deg,_#132dae,_#002aff_60%,_#722ed1)] transition-all duration-500 ease-in-out transform group-hover:scale-110 group-hover:opacity-90"></span>
 
             <span className="relative z-10 flex items-center gap-2 p-3 rounded-full text-white text-lg">

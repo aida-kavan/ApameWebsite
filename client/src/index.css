@@ -165,18 +165,40 @@ body{
   }
 }
 
-li{
+/* li{
   text-decoration: none;
   background-color: #dad1d1;
   background-image: url(https://www.transparenttextures.com/patterns/dust.png);
   background-repeat: repeat;
   direction: rtl;
-}
+} */
 
 @layer utilities {
   .navbar-settings {
     filter: drop-shadow(1px 1px 20px #00000048);
   }
+
+  .bg-btn-hovor:hover {
+   background: #edddf7;
+   background: linear-gradient(90deg, rgb(143, 180, 250) 0%, rgb(119, 137, 248) 50%, rgb(143, 180, 250) 100%);
+  }
+
+  .btn-search-hovor:hover {
+    background: #edddf7;
+    background: linear-gradient(90deg, rgb(193, 214, 252) 0%, rgb(180, 189, 252) 50%, rgb(193, 214, 252) 100%);
+  }
+
+  .border-serch-box {
+    border: 1px solid rgb(143, 180, 250);
+  }
+
+  .shadow-sodino-icon {
+    filter: drop-shadow(1px 1px 1px #000000);
+  }
+
 }
+
+
+
 
 
