@@ -39,7 +39,7 @@ function Home() {
           </div>
 
           <div className='w-[452px] h-[58px] flex justify-between ml-[5px] mt-[25px]'>
-            <button className='w-[213px] h-[58px] btn-home bg-[#5880E4] text-white iransans-Bold text-[16px] rounded-4xl hover:text-[#5880E4] hover:bg-[#F5F5F5] hover:scale-95 duration-300 cursor-pointer'>خدمات چاپ </button>
+            <button className='w-[213px] h-[58px] btn-home bg-[#5880E4] text-white iransans-Bold text-[16px] rounded-4xl hover:text-[#5880E4] hover:bg-[#F5F5F5] hover:scale-90 duration-300 cursor-pointer'>خدمات چاپ </button>
             <button className='w-[213px] h-[58px] btn-home bg-transparent border border-[#5880E4] text-[#5880E4] iransans-Bold text-[16px] rounded-4xl hover:text-[#5880E4] hover:bg-[#ffffff] hover:scale-95 duration-300 cursor-pointer'>تمامی محصولات</button>
           </div>
 
@@ -74,28 +74,28 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-slider-box color-bg-home absolute rounded-4xl text-center w-[458px] h-[160px] mr-[61%]">wd</div>
+      <div className="home-slider-box bg-[#B2DFDB] absolute rounded-4xl text-center w-[458px] h-[160px] mr-[61%]">wd</div>
 
-      <div className="home-slider-box sodino-bg-home absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[9.6%] grid grid-cols-2">
-        <div className=''>
-          <h1 className='iransans-semiBold text-[24px] absolute mr-[34%] mt-[3.5%]'>پویش سودینو</h1>
-          <h1 className='iransans-Bold text-[24px] text-[#EB7600] mt-[15%] mr-[10%] absolute'>مشتری بیار، پول ببر</h1>
-          <p className='iransans-Bold text-[#5C5C5C] text-[14px] leading-[25px] w-[250px] h-[50px] mr-[10%] mt-[48%]'>از امروز، هرکسی که از طرف تو بیاد و سفارش ثبت کنه، ۵ تا ۱۰ درصد مبلغ سفارش مال توئه</p>
-          <h4 className='iransans-Bold text-[#A16902] text-[13px] w-[270px] tracking-wide mr-[5.5%] mt-[3%]'>برای اطلاعات بیشتر و دریافت وجه کلیک کنید</h4>
-          <button className='iransans-Bold text-[16px] text-[#2c2c2c] bg-[#FFD700] btn-home rounded-4xl w-[151px] h-[36px] mt-[10%] mr-[28%]  hover:bg-[#F5F5F5] hover:text-[#b3a13d] hover:text-shadow cursor-pointer duration-300'>جزئیات بیشتر</button>
+      <div className="home-slider-box bg-[#47a4e2] absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[9.6%] grid grid-cols-2">
+        <div className='flex flex-col'>
+          <h1 className='iransans-Bold text-[20px] text-white mt-[18%] ml-[13%]'>پویش سودینو</h1>
+          <h1 className='iransans-ExtraBold text-[24px] text-[#F9CC42] ml-[-20%] mt-[-2%]'>مشتری بیار، پول ببر</h1>
+          <p className='iransans-Bold text-white text-[13px] mt-[10%] mr-[9%]'>نمیدونی چجوری پول در بیاری؟</p>
+          <p className='iransans-semiBold text-[#fffdc39d] text-[12.3px] leading-[25px] w-[233px] h-[50px] mr-[15%]'>از امروز، هرکسی که از طرف تو بیاد و سفارش ثبت کنه، ۵ تا ۱۰ درصد مبلغ سفارش مال توئه</p>
+          <button className='iransans-Bold text-[12px] text-[#000000] bg-[#F9CC42] btn-home rounded-lg w-[215px] h-[34px] hover:bg-[#F5F5F5] hover:text-[#b3a13d] hover:scale-105 cursor-pointer duration-300 mr-[18%] mt-[5%]'>ادامه و کسب درآمد</button>
         </div>
         
         <div className='flex items-center justify-center '>
-          <img src={Sodinoimg} alt="" className='w-[90%] mr-[10%]'/>
+          <img src={Sodinoimg} alt="" className='w-[100%] ml-[12%] mb-[12%] img-sodino-shadow'/>
         </div>
       </div>
 
-      <div className="home-slider-box soldout-bg-home absolute rounded-4xl text-center w-[458px] h-[290px] mr-[61%] mt-[25%] grid grid-rows-4 my-auto">
-        <div className=' flex items-center justify-start mr-[7%] text-[18px]'>
-          <h1 className='iransans-Bold'>محصولات پرفروش</h1>
+      <div className="home-slider-box bg-[#dfe8fa] absolute rounded-4xl text-center w-[458px] h-[290px] mr-[61%] mt-[25%] grid grid-rows-7 ">
+        <div className=' flex items-center justify-start mr-[7%] mt-5 text-[19px] row-span-1'>
+          <h1 className='iransans-Bold text-[#0c1544e3]'>محصولات پرفروش</h1>
         </div>
 
-        <div className='grid grid-cols-5 '>
+        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
           <div className='col-span-1  flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
               <FaCreditCard className='text-2xl text-[#4672e2]'/>
@@ -103,15 +103,14 @@ function Home() {
           </div>
 
           <div className='col-span-2 text-right flex flex-col justify-center'>
-            <h1 className='iransans-Bold'>کارت ویزیت</h1>
+            <h1 className='iransans-Bold text-[#1d234e]'>کارت ویزیت</h1>
             <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 مدل کارت ویزیت</p>
           </div>
     
           <div className='col-span-2  flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
         </div>
 
-
-        <div className='grid grid-cols-5 '>
+        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
 
           <div className='col-span-1 flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
@@ -120,15 +119,14 @@ function Home() {
           </div>
     
           <div className='col-span-2 text-right flex flex-col justify-center'>
-            <h1 className='iransans-Bold'>انواع بنر</h1>
+            <h1 className='iransans-Bold text-[#1d234e]'>انواع بنر</h1>
             <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 نوع بنر برای چاپ</p>
           </div>
 
           <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
         </div>
 
-
-        <div className='grid grid-cols-5 '>
+        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
           <div className='col-span-1 flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
               <GiPaperBagFolded className='text-2xl text-[#4672e2]'/>
@@ -136,7 +134,7 @@ function Home() {
           </div>
 
           <div className='col-span-2 text-right flex flex-col justify-center'>
-            <h1 className='iransans-Bold'>جعبه و پاکت</h1>
+            <h1 className='iransans-Bold text-[#1d234e]'>جعبه و پاکت</h1>
             <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 مدل کارت ویزیت</p>
           </div>
 
@@ -148,7 +146,7 @@ function Home() {
         <div className=''>
           <h1 className='iransans-Bold text-[20px] mt-[8%] mr-[14%]'>دسته بندی محصولات</h1>
           <p className='iransans-medium text-[13px] text-[#4d4d4d7c] text-right mr-[26.5%] mt-[-1%]'>500+ محصول</p>
-          <button className='iransans-Bold text-[15px] text-[#FAFCFE] bg-[#F7988E] w-[151px] h-[36px] rounded-4xl btn-home hover:bg-[#F5F5F5] hover:text-[#F7988E] cursor-pointer duration-300 mt-[18%] mr-[6%]'>خرید محصول</button>
+          <button className='iransans-Bold text-[15px] text-[#FAFCFE] bg-[#F7988E] w-[151px] h-[36px] rounded-4xl btn-home hover:bg-[#F5F5F5] hover:scale-105 hover:text-[#F7988E] cursor-pointer duration-300 mt-[18%] mr-[6%]'>خرید محصول</button>
         </div>
         <div className=' flex items-center justify-center'>
           <img src={CategoryImg} alt="" className='w-[55%]'/>
@@ -160,7 +158,7 @@ function Home() {
           <h1 className='iransans-Bold text-[20px] mt-[8%] mr-[5%]'>دسته بندی خدمات</h1>
           <p className='iransans-medium text-[13px] text-[#4d4d4d7c] text-right mr-[26%] mt-[-1%]'>60+ خدمات</p>
           <p className='iransans-medium text-[11px] text-[#8E8E8E] w-[195px] h-[40px] leading-[20px] text-center mr-[25%] mt-[1%]'>چاپ افست , دیجیتال, فلکسی , سابلیمیشن, خدمات بعد از چاپ , چاپ فوری , با کیفیت </p>
-          <button className='iransans-Bold text-[15px] text-[#FAFCFE] bg-[#7fbbfa] w-[151px] h-[36px] rounded-4xl btn-home hover:bg-[#F5F5F5] hover:text-[#7fbbfa] cursor-pointer duration-300 mt-[4.5%] mr-[5%]'>خدمات چاپ</button>
+          <button className='iransans-Bold text-[15px] text-[#FAFCFE] bg-[#7fbbfa] w-[151px] h-[36px] rounded-4xl btn-home hover:bg-[#F5F5F5] hover:text-[#7fbbfa] hover:scale-105 cursor-pointer duration-300 mt-[4.5%] mr-[5%]'>خدمات چاپ</button>
         </div>
         <div className='flex items-center justify-center'>
           <img src={Printer} alt="" className='w-[88%] ml-[30px]'/>

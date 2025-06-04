@@ -145,6 +145,10 @@
   src: url(./fonts/IRANSansX-Bold.ttf);
 }
 @font-face {
+  font-family: iransans-ExtraBold;
+  src: url(./fonts/IRANSansX-ExtraBold.ttf);
+}
+@font-face {
   font-family: hamrah;
   src: url(./fonts/Hamrah.ttf);
 }
@@ -170,6 +174,10 @@
 
 .hamrah {
   font-family: hamrah;
+}
+
+.iransans-ExtraBold {
+  font-family: iransans-ExtraBold;
 }
 
 
@@ -240,14 +248,13 @@ body{
     background: linear-gradient(90deg, rgba(250, 203, 197, 1) 0%, rgba(255, 255, 255, 1) 100%);
   }
 
-  .sodino-bg-home {
-    background: #e2b073;
-    background: linear-gradient(90deg, rgb(241, 243, 129) 0%, rgb(255, 255, 244) 100%);
-  }
-
   .soldout-bg-home {
 background: #e3ebff;
-background: linear-gradient(90deg, rgba(227, 235, 255, 1) 35%, rgba(255, 255, 255, 1) 100%);
+background: linear-gradient(90deg, rgb(205, 218, 248) 35%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  .img-sodino-shadow {
+    filter: drop-shadow(1px 1px 10px #ffffffa2);
   }
 
 }
