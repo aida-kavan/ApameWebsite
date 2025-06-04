@@ -180,7 +180,6 @@ body{
   direction: rtl;
 }
 
-
 @layer utilities {
   .navbar-settings {
     filter: drop-shadow(1px 1px 20px #00000048);
@@ -242,13 +241,13 @@ body{
   }
 
   .sodino-bg-home {
-background: #e2b073;
-background: linear-gradient(90deg, rgb(241, 243, 129) 0%, rgb(255, 255, 244) 100%);
+    background: #e2b073;
+    background: linear-gradient(90deg, rgb(241, 243, 129) 0%, rgb(255, 255, 244) 100%);
   }
 
   .soldout-bg-home {
-    background: #b4d9fa;
-    background: linear-gradient(90deg, rgb(186, 217, 245) 0%, rgba(255, 255, 255, 1) 100%);
+background: #e3ebff;
+background: linear-gradient(90deg, rgba(227, 235, 255, 1) 35%, rgba(255, 255, 255, 1) 100%);
   }
 
 }

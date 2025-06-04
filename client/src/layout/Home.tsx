@@ -4,10 +4,13 @@ import BallWhite from '../../public/images/ball-white.png';
 import Arrow from '../../public/images/Arrow.png';
 import ArrowIcon from '../../public/images/arrow-s-down.png';
 import PrintIcon from '../../public/images/printeric-1.png';
-import { FaInstagram, FaWhatsapp, FaTelegram, FaYoutube, FaGithub } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaTelegram, FaYoutube, FaGithub, FaCreditCard } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
+import { GiKnightBanner, GiPaperBagFolded } from "react-icons/gi";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 import CategoryImg from '../../public/images/Category.png';
 import Printer from '../../public/images/printer.png';
+import Sodinoimg from '../../public/images/sodino-img.png';
 
 function Home() {
   return (
@@ -72,8 +75,74 @@ function Home() {
       </div>
 
       <div className="home-slider-box color-bg-home absolute rounded-4xl text-center w-[458px] h-[160px] mr-[61%]">wd</div>
-      <div className="home-slider-box sodino-bg-home absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[9.6%]">wd</div>
-      <div className="home-slider-box soldout-bg-home absolute rounded-4xl text-center w-[458px] h-[290px] mr-[61%] mt-[25%]">wd</div>
+
+      <div className="home-slider-box sodino-bg-home absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[9.6%] grid grid-cols-2">
+        <div className=''>
+          <h1 className='iransans-semiBold text-[24px] absolute mr-[34%] mt-[3.5%]'>پویش سودینو</h1>
+          <h1 className='iransans-Bold text-[24px] text-[#EB7600] mt-[15%] mr-[10%] absolute'>مشتری بیار، پول ببر</h1>
+          <p className='iransans-Bold text-[#5C5C5C] text-[14px] leading-[25px] w-[250px] h-[50px] mr-[10%] mt-[48%]'>از امروز، هرکسی که از طرف تو بیاد و سفارش ثبت کنه، ۵ تا ۱۰ درصد مبلغ سفارش مال توئه</p>
+          <h4 className='iransans-Bold text-[#A16902] text-[13px] w-[270px] tracking-wide mr-[5.5%] mt-[3%]'>برای اطلاعات بیشتر و دریافت وجه کلیک کنید</h4>
+          <button className='iransans-Bold text-[16px] text-[#2c2c2c] bg-[#FFD700] btn-home rounded-4xl w-[151px] h-[36px] mt-[10%] mr-[28%]  hover:bg-[#F5F5F5] hover:text-[#b3a13d] hover:text-shadow cursor-pointer duration-300'>جزئیات بیشتر</button>
+        </div>
+        
+        <div className='flex items-center justify-center '>
+          <img src={Sodinoimg} alt="" className='w-[90%] mr-[10%]'/>
+        </div>
+      </div>
+
+      <div className="home-slider-box soldout-bg-home absolute rounded-4xl text-center w-[458px] h-[290px] mr-[61%] mt-[25%] grid grid-rows-4 my-auto">
+        <div className=' flex items-center justify-start mr-[7%] text-[18px]'>
+          <h1 className='iransans-Bold'>محصولات پرفروش</h1>
+        </div>
+
+        <div className='grid grid-cols-5 '>
+          <div className='col-span-1  flex items-center justify-center'>
+            <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
+              <FaCreditCard className='text-2xl text-[#4672e2]'/>
+            </div>
+          </div>
+
+          <div className='col-span-2 text-right flex flex-col justify-center'>
+            <h1 className='iransans-Bold'>کارت ویزیت</h1>
+            <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 مدل کارت ویزیت</p>
+          </div>
+    
+          <div className='col-span-2  flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
+        </div>
+
+
+        <div className='grid grid-cols-5 '>
+
+          <div className='col-span-1 flex items-center justify-center'>
+            <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
+              <GiKnightBanner className='text-2xl text-[#4672e2]'/>
+            </div>
+          </div>
+    
+          <div className='col-span-2 text-right flex flex-col justify-center'>
+            <h1 className='iransans-Bold'>انواع بنر</h1>
+            <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 نوع بنر برای چاپ</p>
+          </div>
+
+          <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
+        </div>
+
+
+        <div className='grid grid-cols-5 '>
+          <div className='col-span-1 flex items-center justify-center'>
+            <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
+              <GiPaperBagFolded className='text-2xl text-[#4672e2]'/>
+            </div>
+          </div>
+
+          <div className='col-span-2 text-right flex flex-col justify-center'>
+            <h1 className='iransans-Bold'>جعبه و پاکت</h1>
+            <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 مدل کارت ویزیت</p>
+          </div>
+
+          <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
+        </div>
+      </div>
 
       <div className="home-slider-box mahsol-bg-home absolute rounded-4xl text-center w-[560px] h-[190px] mr-[0%] mt-[30.25%] grid grid-cols-2">
         <div className=''>
