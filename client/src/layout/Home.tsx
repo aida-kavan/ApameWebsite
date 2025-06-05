@@ -149,7 +149,7 @@ function Home() {
           <button className='iransans-Bold text-[15px] text-[#FAFCFE] bg-[#F7988E] w-[151px] h-[36px] rounded-4xl btn-home hover:bg-[#F5F5F5] hover:scale-105 hover:text-[#F7988E] cursor-pointer duration-300 mt-[18%] mr-[6%]'>خرید محصول</button>
         </div>
         <div className=' flex items-center justify-center'>
-          <img src={CategoryImg} alt="" className='w-[55%]'/>
+          <img src={CategoryImg} alt="" className='w-[83%] ml-[4%]'/>
         </div>
       </div>
 
