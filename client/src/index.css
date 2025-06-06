@@ -233,6 +233,16 @@ body{
     background: linear-gradient(90deg, rgb(141, 208, 235) 0%, rgb(255, 255, 255) 100%);
   }
 
+  .slider-print-home {
+    background: #AEAEAE;
+    background: linear-gradient(90deg, rgba(174, 174, 174, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  .slider-web-home {
+    background: #1c42a3;
+    background: linear-gradient(90deg, rgb(38, 79, 184) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+
   .mahsol-bg-home {
     background: #fcd7d2;
     background: linear-gradient(90deg, rgb(250, 166, 153) 0%, rgb(252, 251, 251) 100%);
@@ -249,8 +259,8 @@ body{
   }
 
   .soldout-bg-home {
-background: #e3ebff;
-background: linear-gradient(90deg, rgb(205, 218, 248) 35%, rgba(255, 255, 255, 1) 100%);
+    background: #e3ebff;
+    background: linear-gradient(90deg, rgb(205, 218, 248) 35%, rgba(255, 255, 255, 1) 100%);
   }
 
   .img-sodino-shadow {
