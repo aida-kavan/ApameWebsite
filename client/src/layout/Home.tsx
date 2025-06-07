@@ -10,10 +10,12 @@ import PrintSlider from "@/components/ui/BannerSlider/PrintSlider";
 import WebSeoSlider from "@/components/ui/BannerSlider/WebSeoSlider";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { AnimatePresence, easeInOut, motion } from 'framer-motion';
-import VisitCard from '../../public/images/visit card.png';
-import Trackt from '../../public/images/trackt.png';
-import PacketName from '../../public/images/packetname.png';
-import SarBarg from '../../public/images/sarbarg.png';
+import Trackt from '../../public/images/tract.gif';
+import PacketName from '../../public/images/packetname.gif';
+import SarBarg from '../../public/images/sarbarg.gif';
+import BoxGif from '../../public/images/box.gif'
+import VisitCard from '../../public/images/card.gif';
+import Label from '../../public/images/label.gif';
 
   const sliderHome = [
     {
@@ -89,14 +91,15 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-slider-box soldout-bg-home absolute rounded-4xl text-center w-[458px] h-[470px] mr-[61%] mt-[15.5%] grid grid-rows-11 ">
+      <div className="home-slider-box soldout-bg-home absolute rounded-4xl text-center w-[458px] h-[470px] mr-[61%] mt-[15.5%] grid grid-rows-12 ">
 
 
-        <div className=' flex items-center justify-start mr-[7%] mt-5 text-[19px] row-span-1'>
-          <h1 className='iransans-Bold text-[#0c1544e3]'>محصولات پرفروش</h1>
+        <div className=' flex items-center justify-start mr-[7%] mt-4 text-[19px] row-span-2'>
+          <h1 className='iransans-Bold text-[#000000e3]'>محصولات پرفروش</h1>
+          <img src={BoxGif} alt="" className=" w-16 h-16 mb-8 mr-[-3%]"/>
         </div>
 
-        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
+        <div className='grid grid-cols-5 row-span-2 mb-3 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
           <div className='col-span-1  flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
               {/* <FaCreditCard className='text-2xl text-[#4672e2]'/> */}
@@ -112,7 +115,7 @@ function Home() {
           <div className='col-span-2  flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
         </div>
 
-        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
+        <div className='grid grid-cols-5 row-span-2 mb-3 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
 
           <div className='col-span-1 flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
@@ -129,7 +132,7 @@ function Home() {
           <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
         </div>
 
-        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
+        <div className='grid grid-cols-5 row-span-2 mb-3 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
           <div className='col-span-1 flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
               {/* <GiPaperBagFolded className='text-2xl text-[#4672e2]'/> */}
@@ -145,10 +148,11 @@ function Home() {
           <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
         </div>
 
-        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
+        <div className='grid grid-cols-5 row-span-2 mb-3 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
           <div className='col-span-1 flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
-              <GiPaperBagFolded className='text-2xl text-[#4672e2]'/>
+              {/* <GiPaperBagFolded className='text-2xl text-[#4672e2]'/> */}
+              <img src={SarBarg} alt="" className="rounded-full h-full w-full"/>
             </div>
           </div>
 
@@ -160,10 +164,11 @@ function Home() {
           <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
         </div>
 
-        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
+        <div className='grid grid-cols-5 row-span-2 mb-3 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
           <div className='col-span-1 flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
-              <GiPaperBagFolded className='text-2xl text-[#4672e2]'/>
+              {/* <GiPaperBagFolded className='text-2xl text-[#4672e2]'/> */}
+              <img src={Label} alt="" className="rounded-full h-full w-full"/>
             </div>
           </div>
 
