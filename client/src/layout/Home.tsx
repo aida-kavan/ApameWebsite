@@ -10,6 +10,9 @@ import PrintSlider from "@/components/ui/BannerSlider/PrintSlider";
 import WebSeoSlider from "@/components/ui/BannerSlider/WebSeoSlider";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { AnimatePresence, easeInOut, motion } from 'framer-motion';
+import VisitCard from '../../public/images/visit card.png';
+import Trackt from '../../public/images/trackt.png';
+import PacketName from '../../public/images/packetname.png';
 
   const sliderHome = [
     {
@@ -63,10 +66,7 @@ function Home() {
       </AnimatePresence>
 
 
-
-      <div className="home-slider-box bg-[#B2DFDB] absolute rounded-4xl text-center w-[458px] h-[160px] mr-[61%]">wd</div>
-
-      <div className="home-slider-box bg-[#47a4e2] absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[9.6%] grid grid-cols-2">
+      <div className="home-slider-box bg-[#47a4e2] absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[0%] grid grid-cols-2">
         <div className='flex flex-col'>
           <h1 className='iransans-Bold text-[20px] text-white mt-[18%] ml-[13%]'>پویش سودینو</h1>
           <h1 className='iransans-ExtraBold text-[24px] text-[#F9CC42] ml-[-20%] mt-[-2%]'>مشتری بیار، پول ببر</h1>
@@ -80,7 +80,9 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-slider-box bg-[#dfe8fa] absolute rounded-4xl text-center w-[458px] h-[290px] mr-[61%] mt-[25%] grid grid-rows-7 ">
+      <div className="home-slider-box bg-[#dfe8fa] absolute rounded-4xl text-center w-[458px] h-[470px] mr-[61%] mt-[15.5%] grid grid-rows-11 ">
+
+
         <div className=' flex items-center justify-start mr-[7%] mt-5 text-[19px] row-span-1'>
           <h1 className='iransans-Bold text-[#0c1544e3]'>محصولات پرفروش</h1>
         </div>
@@ -88,7 +90,8 @@ function Home() {
         <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
           <div className='col-span-1  flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
-              <FaCreditCard className='text-2xl text-[#4672e2]'/>
+              {/* <FaCreditCard className='text-2xl text-[#4672e2]'/> */}
+              <img src={VisitCard} alt="" className="rounded-full h-full w-full"/>
             </div>
           </div>
 
@@ -104,13 +107,30 @@ function Home() {
 
           <div className='col-span-1 flex items-center justify-center'>
             <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
-              <GiKnightBanner className='text-2xl text-[#4672e2]'/>
+              {/* <GiKnightBanner className='text-2xl text-[#4672e2]'/> */}
+              <img src={Trackt} alt="" className="rounded-full h-full w-full"/>
             </div>
           </div>
     
           <div className='col-span-2 text-right flex flex-col justify-center'>
-            <h1 className='iransans-Bold text-[#1d234e]'>انواع بنر</h1>
+            <h1 className='iransans-Bold text-[#1d234e]'>انواع تراکت</h1>
             <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 نوع بنر برای چاپ</p>
+          </div>
+
+          <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
+        </div>
+
+        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
+          <div className='col-span-1 flex items-center justify-center'>
+            <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
+              {/* <GiPaperBagFolded className='text-2xl text-[#4672e2]'/> */}
+              <img src={PacketName} alt="" className="rounded-full h-full w-full"/>
+            </div>
+          </div>
+
+          <div className='col-span-2 text-right flex flex-col justify-center'>
+            <h1 className='iransans-Bold text-[#1d234e]'>پاکت نامه</h1>
+            <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 مدل کارت ویزیت</p>
           </div>
 
           <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
@@ -124,12 +144,29 @@ function Home() {
           </div>
 
           <div className='col-span-2 text-right flex flex-col justify-center'>
-            <h1 className='iransans-Bold text-[#1d234e]'>جعبه و پاکت</h1>
+            <h1 className='iransans-Bold text-[#1d234e]'>انواع سربرگ</h1>
             <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 مدل کارت ویزیت</p>
           </div>
 
           <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
         </div>
+
+        <div className='grid grid-cols-5 row-span-2 hover:bg-white cursor-pointer duration-300 hover:scale-95 rounded-4xl'>
+          <div className='col-span-1 flex items-center justify-center'>
+            <div className='w-14 h-14 flex items-center justify-center rounded-full bg-[#c5d7f8] border border-[#9ebef2]'>
+              <GiPaperBagFolded className='text-2xl text-[#4672e2]'/>
+            </div>
+          </div>
+
+          <div className='col-span-2 text-right flex flex-col justify-center'>
+            <h1 className='iransans-Bold text-[#1d234e]'>لیبل و استیکر</h1>
+            <p className='iransans-medium text-[14px] text-[#5e5e5ec7]'>10 مدل کارت ویزیت</p>
+          </div>
+
+          <div className='col-span-2 flex justify-start items-center text-3xl'><MdKeyboardArrowLeft /></div>
+        </div>
+
+
       </div>
 
       <div className="home-slider-box mahsol-bg-home absolute rounded-4xl text-center w-[560px] h-[190px] mr-[0%] mt-[30.25%] grid grid-cols-2">
