@@ -31,40 +31,48 @@ import SarBarg from '../../public/images/sarbarg.png';
   ];
 
 function Home() {
-
   const [current, setCurrent] = useState(0);
-   const [direction, setDirection] = useState(1);
+  const [direction, setDirection] = useState(1);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isAuto, setIsAuto] = useState(true);
 
-  const nextSlider = () => {
+  const nextSlider = (auto = false) => {
+    if (isAnimating && auto) return;
     setDirection(1);
+    setIsAuto(auto);
     setCurrent((prev) => (prev === sliderHome.length - 1 ? 0 : prev + 1));
   };
 
   const prevSlider = () => {
+    if (isAnimating) return;
     setDirection(-1);
+    setIsAuto(false);
     setCurrent((prev) => (prev === 0 ? sliderHome.length - 1 : prev - 1));
   };
 
   useEffect(() => {
-    const timer = setTimeout(nextSlider, 4000);
+    const timer = setTimeout(() => nextSlider(true), 4000);
     return () => clearTimeout(timer);
   }, [current]);
 
-  
   return (
-    <section className="w-[85%] h-[83vh]  rounded-3xl mt-[9.1%] z-10">
+    <section className="w-[85%] h-[83vh] rounded-3xl mt-[9.1%] z-10">
 
-      <AnimatePresence mode="wait">
-      <motion.div key={sliderHome[current].id} initial={{ x: direction === 1 ? -100 : 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: direction === 1 ? 100 : -100, opacity: 0 }} transition={{ duration: 0.7, ease: easeInOut }} className="relative">
-        {sliderHome.length > 0 && (
-          <div>
-            {sliderHome[current].data}
-            <button onClick={prevSlider} className="absolute mr-[67.9%] mt-[16.4%] w-8 h-8 flex items-center justify-center text-[16px] cursor-pointer bg-[#eeeff71a] text-[#5a5a5a] rounded-full hover:scale-105 duration-300 hover:bg-[#eeeff78a]"><FaArrowLeft /></button>
-            <button onClick={nextSlider} className="absolute right-2 mt-[16.4%] w-8 h-8 flex items-center justify-center text-[16px] cursor-pointer bg-[#eeeff73a] text-[#5a5a5a] rounded-full hover:scale-105 duration-300 hover:bg-[#dddddfab]"><FaArrowRight /></button>
-          </div>
-        )}
-      </motion.div>
-      </AnimatePresence>
+      <div className=" bg-[#ffffffa9] home-slider-box w-[59.8%] h-[57.7vh] absolute rounded-4xl overflow-x-hidden">
+        <AnimatePresence mode="wait" onExitComplete={() => setIsAnimating(false)}>
+          <motion.div key={sliderHome[current].id} initial={isAuto ? { x: direction === 1 ? -20 : 20, opacity: 0 } : { opacity: 1 }} animate={{ x: 0, opacity: 1 }} exit={isAuto ? { x: direction === 1 ? 100 : -100, opacity: 0 } : { opacity: 1 }} transition={isAuto ? { duration: 0.7, ease: easeInOut } : { duration: 0 }} className="w-full" onAnimationStart={() => setIsAnimating(true)} onAnimationComplete={() => setIsAnimating(false)}>
+            {sliderHome.length > 0 && sliderHome[current].data}
+          </motion.div>
+        </AnimatePresence>
+        
+        <motion.button whileTap={{ scale: 0.99 }} onClick={() => nextSlider(false)} disabled={isAnimating} className={`absolute right-2 mt-[23%] w-8 h-8 flex items-center justify-center text-[16px] cursor-pointer bg-[#eeeff73a] text-[#5a5a5a] rounded-full hover:scale-105 duration-300 hover:bg-[#dddddfab] z-10 ${isAnimating ? "opacity-50 cursor-not-allowed" : ""}`}>
+          <FaArrowRight />
+        </motion.button>
+
+        <motion.button whileTap={{ scale: 0.99 }} onClick={prevSlider} disabled={isAnimating} className={`absolute mr-[96.5%] mt-[23%]  w-8 h-8 flex items-center justify-center text-[16px] cursor-pointer bg-[#eeeff71a] text-[#5a5a5a] rounded-full hover:scale-105 duration-300 hover:bg-[#eeeff78a] z-10 ${isAnimating ? "opacity-50 cursor-not-allowed" : ""}`}>
+          <FaArrowLeft />
+        </motion.button>
+      </div>
 
 
       <div className="home-slider-box bg-[#47a4e2] absolute rounded-4xl text-center w-[458px] h-[270px] mr-[61%] mt-[0%] grid grid-cols-2">
