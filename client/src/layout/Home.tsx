@@ -13,6 +13,7 @@ import { AnimatePresence, easeInOut, motion } from 'framer-motion';
 import VisitCard from '../../public/images/visit card.png';
 import Trackt from '../../public/images/trackt.png';
 import PacketName from '../../public/images/packetname.png';
+import SarBarg from '../../public/images/sarbarg.png';
 
   const sliderHome = [
     {
@@ -80,7 +81,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-slider-box bg-[#dfe8fa] absolute rounded-4xl text-center w-[458px] h-[470px] mr-[61%] mt-[15.5%] grid grid-rows-11 ">
+      <div className="home-slider-box soldout-bg-home absolute rounded-4xl text-center w-[458px] h-[470px] mr-[61%] mt-[15.5%] grid grid-rows-11 ">
 
 
         <div className=' flex items-center justify-start mr-[7%] mt-5 text-[19px] row-span-1'>

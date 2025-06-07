@@ -259,8 +259,8 @@ body{
   }
 
   .soldout-bg-home {
-    background: #e3ebff;
-    background: linear-gradient(90deg, rgb(205, 218, 248) 35%, rgba(255, 255, 255, 1) 100%);
+    background: #47A4E2;
+    background: linear-gradient(1deg, rgba(71, 164, 226, 1) 0%, rgba(153, 200, 242, 1) 100%);
   }
 
   .img-sodino-shadow {
