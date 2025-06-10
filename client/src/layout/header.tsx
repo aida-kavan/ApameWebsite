@@ -121,7 +121,7 @@ const Header = () => {
               <li className="flex gap-1 items-center justify-center">
                 <a
                   href={nav.link}
-                  className="text-[16.5px] hover:text-[#4672e2e0] duration-200 hover:opacity-80 flex items-center cursor-pointer"
+                  className="text-[16.5px]  duration-200  flex items-center cursor-pointer"
                   onClick={() => {
                     if (nav.title === "خدمات") {
                       setSubmenuOpen((prev) => !prev);
