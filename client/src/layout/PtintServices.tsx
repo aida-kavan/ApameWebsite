@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getPrintingServices } from "../lib/api";
 import { useNavigate } from "react-router-dom";
-import Spinner from "@/components/ui/Spinner";
+import Spinner from "@/components/elements/Spinner";
 
 interface PrintingService {
   id: number;

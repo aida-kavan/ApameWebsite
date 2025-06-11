@@ -5,14 +5,16 @@ import Footer from './Footer';
 
 function AppLayout() {
   return (<>
-    <div className="flex flex-col items-center min-h-screen">
-      <Header />
-      
-      <main className="flex-1 w-full flex items-center justify-center"> 
-        <Outlet />
-      </main>
+   <div className='flex flex-col items-center min-h-screen '>
+    <Header/>
+    <div className='mt-46'>
+
+
+    <Outlet/>
     </div>
-      <Footer/>
+
+    <Footer/>
+   </div>
   </>
   );
 }

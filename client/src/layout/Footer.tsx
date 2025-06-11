@@ -1,9 +1,9 @@
-import { Circle, Instagram, Phone } from "lucide-react";
-import { FaTelegram, FaWhatsapp } from "react-icons/fa";
+import { Circle, Phone } from "lucide-react";
+
 
 const Footer = () => {
   return (
-    <footer className="relative">
+    <footer className="relative min-w-screen ">
       <div className="max-w-[900px] flex flex-col items-center  h-[300px] bg-[url(/images/card.jpg)] bg-cover rounded-4xl mx-auto relative top-40">
         <h1 className="text-3xl text-white text-shadow-amber-50 bg-gradient-to-b from-black to-[#fff0] p-4 mt-7 ">
           عضویت در خبرنامه
