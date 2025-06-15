@@ -3,6 +3,7 @@ import Home from "../pages/HomePage.tsx";
 import SignIn from "../pages/LoginPage.tsx";
 import {  Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import ProductPages from "@/pages/ProductPages.tsx";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -14,6 +15,7 @@ const AnimatedRoutes = () => {
               <Route index element={<Home />} />
               <Route path="/home" element={<Home />} />
               <Route path="/signin" element={<SignIn />} />
+              <Route path="/product" element={<ProductPages />} />
             </Route>
           </Routes>
         </AnimatePresence>

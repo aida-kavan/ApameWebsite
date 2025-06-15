@@ -1,21 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
-  return (
+  return ( <>
+  <h1 className="peydaExtra text-center text-white text-shadow text-shadow-blue-950 text-3xl px-5 py-2 bgBlur w-fit m-auto rounded ">
+          ورود کاربران
+        </h1>
     <motion.div
-      className=" min-w-[700px]  flex items-center justify-between rounded-4xl bg-[url(images/bg.png)] "
+      className=" w-[50vw]  flex items-center justify-evenly rounded-4xl bg-white p-2"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="bg-white w-[300px] gap-2 m-2 h-[300px] rounded-3xl flex  p-5 flex-col">
-        <h1 className="peydaExtra text-center  text-xl bg-gradient-to-r from-[#B5C7F3] rounded p-1 ] to-[#90AAEE] h-fit ">
-          ورود کاربران
-        </h1>
+      
+      <div className="bg-white w-[350px] gap-2 m-2 h-[300px] rounded-3xl flex  p-6 flex-col">
+        
         <div className="flex gap-1 ">
           <div className="flex gap-1 p-1  items-center bg-gray-200 w-1/2 h-10 rounded-md border">
             <svg
@@ -79,9 +81,17 @@ const LoginPage = () => {
             رمز خود را فراموش کرده ام.
           </p>
         </Link>
+        <Link to={"#"}>
+          <p className="text-xs text-gray-500 mr-1">
+            حساب کاربری ندارید؟
+          </p>
+        </Link>
       </div>
-      <div className="w-1/3 h-full bg-white/20"></div>
+      <div className="w-2/5  h-full bg-white/20">
+      <img src="/images/موشک پرانی.gif"/>
+      </div>
     </motion.div>
+  </>
   );
 };
 
