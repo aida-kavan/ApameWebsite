@@ -1,19 +1,19 @@
-import Header from "./layout/header"
-import Footer from "./layout/footer"
-import DropdownMenuItem from "@/components/dropdownMenuItem";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
+
+const queryClient = new QueryClient();
 
 function App() {
-
   return (
-    <>
-      <Header/>
-      <div className="bg-white shadow-2xl h-[90vh] w-[75%] m-auto mt-4 rounded-4xl text-4xl">
-
-
-      </div>
-      <Footer/>
-    </>
-  )
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <AnimatedRoutes/>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
 }
 
-export default App
+export default App;
