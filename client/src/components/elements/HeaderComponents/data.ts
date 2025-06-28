@@ -91,6 +91,10 @@ export const Menus = [
   {
     name: "وبلاگ",
   },
+ 
+  {
+    name: "گالری",
+  },
   {
     name: "درباره ی ما",
    link: "/aboutus"

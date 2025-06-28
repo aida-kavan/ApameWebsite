@@ -34,9 +34,9 @@ const Header = () => {
           
       </nav>
       <div className="flex items-center">
-        <Link to={"/signup"} className="cta">
+        <Link to={"/signup"}>
           
-            <div className="loginText">
+            <div className="bg-blue-600 px-5 py-2 rounded-3xl">
               ورود /ثبت نام <i className="fa-solid fa-arrow-right-long"></i>
             </div>
         </Link>
