@@ -34,7 +34,7 @@ const Header = () => {
           
       </nav>
       <div className="flex items-center">
-        <Link to={"/signin"} className="cta">
+        <Link to={"/signup"} className="cta">
           
             <div className="loginText">
               ورود /ثبت نام <i className="fa-solid fa-arrow-right-long"></i>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 export type MenuSubItem = {
   name: string;
@@ -13,6 +14,7 @@ export type Menu = {
   subMenuHeading?: string[];
   subMenu?: MenuSubItem[];
   gridCols?: number;
+  link?:string;
   
 };
 
@@ -58,12 +60,15 @@ const DesktopMenu = ({ menu }: DesktopMenuProps) => {
       onHoverEnd={toggleHoverMenu}
       key={menu.name}
     >
+      <Link to={menu.link ?? "#"}>
       <span className="flex-center gap-1 hover:bg-white/10 cursor-pointer px-3 py-1 rounded-xl">
         {menu.name}
         {hasSubMenu && (
           <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
         )}
       </span>
+      </Link>
+      
       {hasSubMenu && (
         <motion.div
           className="sub-menu bg-blue-950/80 "

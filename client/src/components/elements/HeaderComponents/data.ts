@@ -93,5 +93,6 @@ export const Menus = [
   },
   {
     name: "درباره ی ما",
+   link: "/aboutus"
   },
 ];

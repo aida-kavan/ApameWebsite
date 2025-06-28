@@ -13,7 +13,7 @@ const instagramPage = () => {
             className="relative bottom-10 right-[-2px]"
           />
           <div className=" flex flex-col justify-center items-center  ">
-            <h1 className="hamrah text-3xl">
+            <h1 className="farhang text-[26px]">
               ما هر روز کلی مطالب جدید توی پیجمون منتشر میکنیم!
             </h1>
             <Link to={"https://www.instagram.com/apametabligh/"} target="_blank">
