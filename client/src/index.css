@@ -171,6 +171,12 @@
   font-family: farhang;
   src: url(/fonts/FarhangFaNum-Black.ttf);
 }
+@font-face {
+  font-family: farhang-medium;
+  src: url(/fonts/FarhangFaNum-DemiBold.ttf);
+}
+
+
 
 * {
   scroll-behavior: smooth;
@@ -180,6 +186,9 @@
 
 .iransans-semiBold {
   font-family: iransans-semiBold;
+}
+.peydaBold{
+    font-family: peydabold;
 }
 
 .iransans-medium {
@@ -205,6 +214,9 @@
 }
  .farhang {
     font-family: farhang;
+  }
+  .farhang-medium{
+    font-family: farhang-medium
   }
 
   h1{
