@@ -2,9 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import bcrypt from "bcrypt";
-import cookieParser from "cookie-parser";
+import { errorHandler } from "./middlewares/errorHandler.js"
+import { connectDB } from "./config/db.js";
 
 dotenv.config();
 
@@ -18,6 +17,14 @@ app.use(
   })
 );
 
+dotenv.config()
+
 app.use(bodyParser.json());
 app.use(express.json());
-app.use(cookieParser());
+app.use(errorHandler)
+
+
+app.listen(PORT, () => {
+  console.log(` Server running on port ${PORT}`);
+});
+

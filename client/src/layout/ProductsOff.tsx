@@ -13,9 +13,9 @@ import { Button } from "@/components/ui/button";
 const ProductsOff = () => {
   const products = [
     { ProductImg: "images/1.jpg", ProductName: "کارت ویزیت سلفون مات" },
-    { ProductImg: "images/2.jpg", ProductName: "کارت ویزیت سلفون براق" },
-    { ProductImg: "images/3.jpg", ProductName: "فاکتور چهار لت" },
-    { ProductImg: "images/2.jpg", ProductName: "پرچم ساحلی متوسط" },
+    { ProductImg: "images/1.jpg", ProductName: "کارت ویزیت سلفون براق" },
+    { ProductImg: "images/1.jpg", ProductName: "فاکتور چهار لت" },
+    { ProductImg: "images/1.jpg", ProductName: "پرچم ساحلی متوسط" },
     { ProductImg: "images/1.jpg", ProductName: "بگ تحریر مشکی" },
     { ProductImg: "images/1.jpg", ProductName: "بگ تحریر مشکی" },
     { ProductImg: "images/1.jpg", ProductName: "بگ تحریر مشکی" },
@@ -25,7 +25,7 @@ const ProductsOff = () => {
   ];
 
   return (
-    <div className="bgBlur backdrop-blur-md p-8 w-[85%] rounded-3xl flex flex-col gap-2">
+    <div className="bgBlur backdrop-blur-md px-8 pt-4 w-[85%] rounded-3xl flex flex-col gap-2">
       <div className="flex items-center justify-between px-3 ">
         <div className="text-white text-4xl">
           <div className="flex items-center">
@@ -51,18 +51,17 @@ const ProductsOff = () => {
       </div>
       <div className="p-1">
         <Swiper
-          slidesPerView={5}
+          slidesPerView={6}
           autoplay={{
             delay: 3000,
             pauseOnMouseEnter: true,
           }}
-          spaceBetween={5}
+          spaceBetween={1}
           modules={[Pagination, Autoplay]}
-          height={"500px"}
-          className="w-full"
+          
         >
           {products.map((item, idx) => (
-            <SwiperSlide key={idx}>
+            <SwiperSlide key={idx}  className="!h-[350px]">
               <ProductCard
                 ProductName={item.ProductName}
                 ProductImg={item.ProductImg}

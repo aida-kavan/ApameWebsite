@@ -39,7 +39,7 @@ const LoginPage = () => {
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-2"
           >
-            <h1 className="m-auto text-3xl hamrah   p-2 px-20">
+            <h1 className="m-auto text-3xl  p-2 px-20">
               ثـبـت نـام{" "}
             </h1>
             <div className="flex items-center mb-[-5px] gap-1 ">
